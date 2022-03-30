@@ -1,0 +1,36 @@
+import java.util.*;   
+public class SunnyNumberExample1  aaa  
+{   
+//driver code   
+public static void main(String args[])  bbb  
+{    
+Scanner sc = new Scanner(System.in);  
+System.out.print("Enter a number to check: "); ccc  
+//reading a number from the user  
+int N=sc.nextInt();  
+//calling user-defined function    ddd
+isSunnyNumber(N);   
+}       
+//function checks whether the given is a perfect square or not   eee 
+static boolean findPerfectSquare(double num)   
+{   
+//finds the square root of the ggiven number  fff
+double square_root = Math.sqrt(num);   
+//if square root is an integer   
+return((square_root - Math.floor(square_root)) == 0);   ggg
+}   
+//function that checks whether the given number is Sunny or not  
+static void isSunnyNumber(int N)   hhh
+{   
+//checks N+1 is perfect square or not iiii 
+if (findPerfectSquare(N + 1))   
+{   
+System.out.println("The given number is a sunny number.");  jjj  
+}   
+//executes if N+1 is not a perfect square  kkkk
+else  
+{   
+System.out.println("The given number is not a sunny number.");   kkkkk
+}   
+}   
+}  
